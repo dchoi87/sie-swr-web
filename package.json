@@ -9,10 +9,14 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "typecheck": "tsc -b",
+    "typecheck:watch": "tsc -b --watch"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
     "react": "^19.2.7",
+    "react-bootstrap-icons": "^1.11.6",
     "react-dom": "^19.2.7"
   },
   "devDependencies": {
