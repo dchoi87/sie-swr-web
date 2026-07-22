@@ -14,8 +14,17 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {
+export const Primary: Story = {
   args: {
-    label: "Hello World",
+    label: "Lorem Ipsum",
+    iconName: "ArrowRight",
+    type: "primary",
+  },
+};
+
+export const Secondary: Story = {
+  args: {
+    ...Primary.args,
+    type: "secondary",
   },
 };
