@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import * as icons from "react-bootstrap-icons";
 
-import { Icon } from "@/components/atoms";
+import { Icon, Text } from "@/components/atoms";
 
 import styles from "./Button.module.scss";
 
@@ -27,7 +27,7 @@ const Button = ({
       {...props}
       onClick={onClick}
     >
-      {label && <span>{label}</span>}
+      {label && <Text type="span" content={label} />}
       {iconName && <Icon iconName={iconName} size="24" />}
     </button>
   );
