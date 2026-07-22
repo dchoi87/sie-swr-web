@@ -20,6 +20,24 @@ export default defineConfig({
       "@": path.resolve(dirname, "./src"),
     },
   },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        // Lets `@use "styles/tokens"` resolve from src/.
+        loadPaths: [path.resolve(dirname, "src")],
+        // Auto-inject the SCSS token layer into every module so $palette and
+        // mixins are available without an import. `_tokens.scss` emits no CSS,
+        // so there's nothing to duplicate — and it must not be injected into
+        // itself (that would be a circular @use).
+        additionalData: (source: string, filename: string) => {
+          if (filename.replace(/\\/g, "/").endsWith("/styles/_tokens.scss")) {
+            return source;
+          }
+          return `@use "styles/tokens" as *;\n${source}`;
+        },
+      },
+    },
+  },
   test: {
     projects: [
       {

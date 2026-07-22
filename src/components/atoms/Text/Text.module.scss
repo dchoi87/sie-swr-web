@@ -1,6 +1,8 @@
 .text {
   margin: 0;
   padding: 0;
+  // Inherit an explicit parent color when set; otherwise the global default
+  // (body { color: var(--color-text) }) cascades in.
   color: inherit;
 }
 
@@ -13,6 +15,7 @@ h6 {
   font-family: "PT Sans";
   font-size: 56px;
   font-weight: 600;
+  color: var(--color-text-strong);
 }
 
 span,

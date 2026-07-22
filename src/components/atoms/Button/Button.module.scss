@@ -3,17 +3,18 @@
   align-items: center;
   gap: 8px;
   padding: 16px 32px;
-  border: 3px solid #191919;
+  border: 3px solid var(--color-primary);
   border-radius: 8px;
   background: transparent;
+  color: var(--color-primary);
   cursor: pointer;
 
   &.primary {
-    background: #191919;
-    color: #fff;
+    background: var(--color-primary);
+    color: var(--color-on-primary);
   }
 
   &.secondary {
-    color: #191919;
+    color: var(--color-primary);
   }
 }
