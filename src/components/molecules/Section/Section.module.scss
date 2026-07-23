@@ -1,0 +1,13 @@
+.container {
+  width: 100%;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  border: 1px dashed #ccc;
+}
+
+.children {
+  padding: 8px;
+}

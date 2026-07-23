@@ -27,7 +27,9 @@ const Button = ({
       {...props}
       onClick={onClick}
     >
-      {label && <Text type="span" content={label} />}
+      {label && (
+        <Text type="span" content={label} addClassName={styles.label} />
+      )}
       {iconName && <Icon iconName={iconName} size="24" />}
     </button>
   );

@@ -26,8 +26,9 @@
   --color-on-primary: var(--white);
 
   // --- Typography -------------------------------------------------------------
-  --font-sans: system-ui, "Segoe UI", Roboto, sans-serif;
-  --font-heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Open Sans", "Segoe UI", Roboto, sans-serif;
+  --font-heading: "PT Sans", "Segoe UI", Roboto, sans-serif;
+  --font-cta: "PT Sans", "Segoe UI", Roboto, sans-serif;
   --font-mono: ui-monospace, Consolas, monospace;
 
   // --- Base document ----------------------------------------------------------
@@ -61,8 +62,7 @@
 
 body {
   margin: 0;
-  color: var(--color-text);
-  background: var(--color-bg);
+  color: var(--color-primary);
   font-family: var(--font-sans);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
