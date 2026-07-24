@@ -1,20 +1,5 @@
 @use "sass:map";
 
-// =============================================================================
-// Build-time design tokens (SCSS layer)
-//
-// This file emits NO CSS. It is auto-injected into every *.scss file via
-// `css.preprocessorOptions.scss.additionalData` in vite.config.ts, so the
-// palette map, breakpoints, and mixins below are available everywhere without
-// an explicit @use.
-//
-// Runtime colors live as CSS custom properties in `global.scss` (generated
-// from $palette below) — components should consume those, e.g. var(--color-text).
-// =============================================================================
-
-// Primitive palette — the raw values, named by what they ARE.
-// Single source of truth: global.scss generates the `--*` custom properties
-// from this map, and it's also available for build-time color math / loops.
 $palette: (
   "white": #fff,
   "black": #191919,
@@ -31,9 +16,10 @@ $palette: (
   "purple-400": #aa3bff,
 );
 
-// Responsive breakpoints (max-width).
+// Responsive breakpoints (min-width).
 $breakpoints: (
-  "tablet": 1024px,
+  "mobile": 576px,
+  "tablet": 768px,
 );
 
 // Read a raw primitive value at build time: palette("purple-400").
@@ -41,7 +27,9 @@ $breakpoints: (
   @return map.get($palette, $key);
 }
 
-// Mobile-first-down media helper: @include respond-to("tablet") { ... }.
+// Mobile-first-up media helper: styles apply at the named breakpoint and wider.
+// Write the small-screen case as the base rule, then override:
+// @include respond-to("tablet") { ... }.
 @mixin respond-to($name) {
   $width: map.get($breakpoints, $name);
 
@@ -49,7 +37,7 @@ $breakpoints: (
     @error "Unknown breakpoint: #{$name}";
   }
 
-  @media (max-width: $width) {
+  @media (min-width: $width) {
     @content;
   }
 }

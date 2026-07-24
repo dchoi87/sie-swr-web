@@ -1,5 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
 
+import { Grid } from "@/components/molecules";
 import Section from "./Section";
 
 const meta = {
@@ -19,6 +20,12 @@ export const Default: Story = {
     header: "Lorem ipsum dolor sit amet consectetur?",
     subheader:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    children: <div>Hello World</div>,
+    children: (
+      <Grid>
+        <div>Hello World</div>
+        <div>Hello World</div>
+        <div>Hello World</div>
+      </Grid>
+    ),
   },
 };

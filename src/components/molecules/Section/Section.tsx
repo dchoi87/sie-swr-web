@@ -21,7 +21,7 @@ const Section = ({
     <section className={clsx(styles.container, addClassName)}>
       {header && <Text type="h3" content={header} />}
       {subheader && <Text type="p" content={subheader} />}
-      <div className={styles.children}>{children}</div>
+      {children && <div className={styles.children}>{children}</div>}
     </section>
   );
 };

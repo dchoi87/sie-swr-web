@@ -23,7 +23,7 @@
 
   // Base Document
   color-scheme: light dark;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.45;
   letter-spacing: 0.18px;
 }
@@ -47,6 +47,6 @@ body {
 
 @include respond-to("tablet") {
   :root {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
