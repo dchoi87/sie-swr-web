@@ -24,9 +24,24 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     items: [
-      { value: "one", header: "Section One", content: "Lorem ipsum dolor." },
-      { value: "two", header: "Section Two", content: "Sit amet consectetur." },
-      { value: "three", header: "Section Three", content: "Adipiscing elit." },
+      {
+        value: "one",
+        header: "Medications",
+        content: "Lorem ipsum dolor.",
+        icon: "Prescription",
+      },
+      {
+        value: "two",
+        header: "Reasons for Visit",
+        content: "Sit amet consectetur.",
+        icon: "ClipboardPulse",
+      },
+      {
+        value: "three",
+        header: "Medical History",
+        content: "Adipiscing elit.",
+        icon: "HeartPulse",
+      },
     ],
   },
 };

@@ -21,8 +21,19 @@
   border: none;
   background: transparent;
   color: var(--color-text-strong);
-  text-align: left;
   cursor: pointer;
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 16px;
+}
+
+.text {
+  font-weight: 600;
+  font-size: 20px;
 }
 
 .chevron {

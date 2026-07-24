@@ -1,5 +1,6 @@
 import * as RadixAccordion from "@radix-ui/react-accordion";
 import clsx from "clsx";
+import * as icons from "react-bootstrap-icons";
 
 import { Icon, Text } from "@/components/atoms";
 
@@ -9,6 +10,7 @@ export interface AccordionItem {
   value: string;
   header: string;
   content: React.ReactNode;
+  icon: keyof typeof icons;
 }
 
 export interface AccordionProps {
@@ -23,11 +25,14 @@ const Accordion = ({ addClassName, items }: AccordionProps) => {
       collapsible
       className={clsx(styles.container, addClassName)}
     >
-      {items.map(({ value, header, content }) => (
+      {items.map(({ value, header, content, icon }) => (
         <RadixAccordion.Item key={value} value={value} className={styles.item}>
           <RadixAccordion.Header className={styles.header}>
             <RadixAccordion.Trigger className={styles.trigger}>
-              <Text type="span" content={header} />
+              <div className={styles.label}>
+                <Icon iconName={icon} className={styles.icon} size={24} />
+                <Text type="span" content={header} addClassName={styles.text} />
+              </div>
               <Icon
                 iconName="ChevronDown"
                 className={styles.chevron}
