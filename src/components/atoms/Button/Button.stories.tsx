@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react-vite";
+import * as icons from "react-bootstrap-icons";
 
 import Button from "./Button";
 
@@ -8,7 +9,12 @@ const meta = {
   parameters: {
     layout: "centered",
   },
-  argTypes: {},
+  argTypes: {
+    iconName: {
+      control: "select",
+      options: Object.keys(icons),
+    },
+  },
 } satisfies Meta<typeof Button>;
 
 export default meta;

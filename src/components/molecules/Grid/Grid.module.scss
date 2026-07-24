@@ -2,7 +2,6 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
 
   @include respond-to("tablet") {
     grid-template-columns: repeat(2, 1fr);
