@@ -2,18 +2,18 @@ import clsx from "clsx";
 
 import { Text } from "@/components/atoms";
 
-import styles from "./Radio.module.scss";
+import styles from "./Checkbox.module.scss";
 
-export interface RadioProps {
+export interface CheckboxProps {
   addClassName?: string;
   label: string;
   subtext?: string;
 }
 
-const Radio = ({ addClassName, label, subtext }: RadioProps) => {
+const Checkbox = ({ addClassName, label, subtext }: CheckboxProps) => {
   return (
     <button className={clsx(styles.container, addClassName)}>
-      <div className={styles.radio}></div>
+      <div className={styles.checkbox}></div>
       <div className={styles.label}>
         <Text type="span" content={label} addClassName={styles.text} />
         {subtext && (
@@ -24,4 +24,4 @@ const Radio = ({ addClassName, label, subtext }: RadioProps) => {
   );
 };
 
-export default Radio;
+export default Checkbox;
