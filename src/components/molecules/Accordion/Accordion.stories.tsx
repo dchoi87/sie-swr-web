@@ -27,19 +27,22 @@ export const Default: Story = {
       {
         value: "one",
         header: "Medications",
-        content: "Lorem ipsum dolor.",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         icon: "Prescription",
       },
       {
         value: "two",
         header: "Reasons for Visit",
-        content: "Sit amet consectetur.",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
         icon: "ClipboardPulse",
       },
       {
         value: "three",
         header: "Medical History",
-        content: "Adipiscing elit.",
+        content:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. ",
         icon: "HeartPulse",
       },
     ],
